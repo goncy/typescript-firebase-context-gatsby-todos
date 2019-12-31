@@ -1,9 +1,13 @@
 import React from "react";
 
+import Layout from "../ui/structure/Layout";
+import SEO from "../ui/meta/Seo";
+
 const NotFoundPage = () => (
-  <div>
+  <Layout>
+    <SEO title="Page not found" />
     <h1>NOT FOUND</h1>
-  </div>
+  </Layout>
 );
 
 export default NotFoundPage;
