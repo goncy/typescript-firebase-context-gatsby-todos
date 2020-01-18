@@ -1,5 +1,5 @@
-# gatsby-firebase-typescript-todo-app
+# firebase-typescript-context-gatsby-todos
 
-Playing around with Gatsby, Firebase and Typescript
+Playing around with Firebase, Typescript, Context and Gatsby
 
-[DEMO](https://gatsby-firebase-typescript-todo-app.netlify.com/)
+[DEMO](https://goncy-firebase-typescript-context-gatsby-todos.netlify.com/)
