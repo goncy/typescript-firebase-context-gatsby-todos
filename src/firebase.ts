@@ -22,22 +22,25 @@ function initialize() {
   return instance;
 }
 
-export default {
-  get database() {
-    initialize();
-
-    return firebase.firestore();
-  },
-  get auth() {
-    initialize();
-
-    return firebase.auth();
-  },
-  providers: {
-    get google() {
-      initialize();
-
-      return new firebase.auth.GoogleAuthProvider();
+export default new Proxy(
+  {
+    get database() {
+      return firebase.firestore();
+    },
+    get auth() {
+      return firebase.auth();
+    },
+    providers: {
+      get google() {
+        return new firebase.auth.GoogleAuthProvider();
+      },
     },
   },
-};
+  {
+    get: function(target, name) {
+      initialize();
+
+      return target[name];
+    },
+  }
+);
