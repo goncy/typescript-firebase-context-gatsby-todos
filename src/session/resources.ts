@@ -1,9 +1,9 @@
-import { auth, providers } from "../firebase";
+import firebase from "../firebase";
 
 import { IUser } from "./types";
 
 export default {
-  signIn: () => auth.signInWithPopup(providers.google),
-  signOut: () => auth.signOut(),
-  onChange: (callback: (user: IUser) => void) => auth.onAuthStateChanged(callback),
+  signIn: () => firebase.auth.signInWithPopup(firebase.providers.google),
+  signOut: () => firebase.auth.signOut(),
+  onChange: (callback: (user: IUser) => void) => firebase.auth.onAuthStateChanged(callback),
 };

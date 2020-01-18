@@ -1,7 +1,7 @@
-import { User } from "firebase";
+import firebase from "firebase";
 
 export interface IState {
-  user: User;
+  user: firebase.User;
 }
 
 export interface IActions {
@@ -14,4 +14,4 @@ export interface IContext {
   actions: IActions;
 }
 
-export { User as IUser };
+export type IUser = firebase.User;

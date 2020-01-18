@@ -15,7 +15,7 @@ const Container = styled.div`
 const LoadingPage = () => (
   <Container>
     <SEO title="Loading..." />
-    <span>Loading todos...</span>
+    <span>Loading window...</span>
   </Container>
 );
 

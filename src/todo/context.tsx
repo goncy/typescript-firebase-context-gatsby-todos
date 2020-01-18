@@ -6,7 +6,7 @@ import { ITodo, IContext, IState, IActions } from "./types";
 import api from "./resources";
 import Loading from "./pages/Loading";
 
-const TodoContext = React.createContext<IContext | null>(null);
+const TodoContext = React.createContext({} as IContext);
 
 const TodoProvider = ({ children }) => {
   const user = useUser();

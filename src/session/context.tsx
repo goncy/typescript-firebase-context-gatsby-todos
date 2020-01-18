@@ -4,7 +4,7 @@ import { IUser, IContext, IState, IActions } from "./types";
 import auth from "./resources";
 import Login from "./pages/Login";
 
-const SessionContext = React.createContext<IContext | null>(null);
+const SessionContext = React.createContext({} as IContext);
 
 const SessionProvider = ({ children }) => {
   const [user, setUser] = React.useState<IUser>(null);
