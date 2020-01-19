@@ -2,4 +2,4 @@ import React from "react";
 
 import App from "./src/app";
 
-export const wrapRootElement = ({ element }) => <App>{element}</App>;
+export const wrapPageElement = ({ element }) => <App>{element}</App>;

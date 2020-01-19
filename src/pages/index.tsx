@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "gatsby";
 
 import Layout from "../ui/structure/Layout";
 import SEO from "../ui/meta/Seo";
-import Button from "../ui/controls/Button";
-import { useTodos, useTodoActions, Todo, ITodo } from "../todo";
+import { useTodos, Todo, ITodo } from "../todo";
 
 const Container = styled.div`
   height: 100%;
@@ -33,13 +33,12 @@ const Todos = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 `;
 
-const Footer = styled.a`
+const Footer = styled.footer`
   text-align: center;
 `;
 
 const IndexPage = () => {
   const todos = useTodos();
-  const { add } = useTodoActions();
 
   return (
     <Layout>
@@ -58,7 +57,7 @@ const IndexPage = () => {
           )}
         </Content>
         <Footer>
-          <Button onClick={() => add("Something new to do")}>Add something else</Button>
+          <Link to="/add">Add something else</Link>
         </Footer>
       </Container>
     </Layout>
